@@ -11,7 +11,7 @@ module ChatHelper
         <small class="text-muted">
 
 
-        <div><h4>'+ answer + '</h4><div id="time"><span class="glyphicon glyphicon-time"></span>' +
+        <div><p>'+ answer + '</p><div id="time"><span class="glyphicon glyphicon-time"></span>' +
             time.to_s +
             '</small></div></div>
 
