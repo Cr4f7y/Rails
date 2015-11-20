@@ -1,0 +1,28 @@
+// Place all the styles related to the logic controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  padding-bottom:140px;// You can adjust it
+  background: url(footer_lodyas.png);
+  background-repeat: repeat-x;
+  color:white !important;
+
+}
+
+.footer-main {
+  background: #81ccfb;
+  padding: 1em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.jumbotron{
+  background-color: #35714F !important;
+  color:white !important;
+  margin-top: 100px;
+}
+.navbar-inverse .navbar-brand {
+  color: #B112FF !important;
+}

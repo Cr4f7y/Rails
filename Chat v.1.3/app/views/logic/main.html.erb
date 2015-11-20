@@ -1,0 +1,39 @@
+<div id="chat" class="col-md-offset-1">
+ <div class="container" >
+   <div class="col-xs-6">
+    <form action="answer" method="get">
+       <div class="panel-body">
+          <ul class="chat">
+            <% if @messages_all != nil %>
+                <%for @messages_all in @messages_all%>
+                    <%= @messages_all%>
+                  <%end%>
+            <%end%>
+          </ul>
+        </div>
+
+      </form>
+  </div>
+
+ </div>
+
+    <div class="col-md-offset-2 col-md-6">
+      <form role="form" action="massHandler" method="post" >
+        <div class="form-group">
+          <div class="col-sm-8">
+            <input type="text" name="message" class="form-control" placeholder="Enter message" autofocus>
+          </div>
+             <div class="col-sm-1">
+               <button id="btn" type="submit" class="btn btn-success">Send</button>
+             </div>
+
+        </div>
+              <input name="authenticity_token" type="hidden"
+               value=<%=form_authenticity_token%> />
+      </form>
+
+    </div>
+    </div>
+
+
+
