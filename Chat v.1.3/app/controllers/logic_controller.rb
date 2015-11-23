@@ -18,9 +18,7 @@ class LogicController < ApplicationController
     m.save
 
     getLastMess()
-
     redirect_to :action => 'main'
-
    end
 
   def getLastMess

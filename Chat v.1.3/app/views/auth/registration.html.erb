@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row text-center pad-top ">
     <div class="col-md-12">
-      <h2 id="hedReg">Chat vRegistration Page</h2>
+      <h2 id="hedReg">Chat Registration Page</h2>
     </div>
   </div>
   <div class="row  pad-top">
@@ -12,10 +12,10 @@
           <strong>   Register Yourself </strong>
         </div>
         <div class="panel-body">
-          <form role="form" action="handler_registration" method="post" data-toggle="validator">
+          <form role="form" action="handler_registration" method="post" data-toggle="validator" novalidate>
             <br/>
             <div class="form-group input-group">
-              <span class="input-group-addon"><i class="fa fa-circle-o-notch"  ></i></span>
+              <span class="input-group-addon"><i class="fa fa-circle-o-notch"></i></span>
               <input type="text" class="form-control" name="name" placeholder="Your Name" required />
             </div>
                         <div class="form-group input-group">
@@ -27,7 +27,7 @@
             </div>
             <div class="form-group input-group">
               <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-              <input type="password" data-minlength="7" class="form-control" id="inputPassword" placeholder="At least 6 characters" name="passwd" required>
+              <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="At least 6 characters" name="passwd" required>
             </div>
             <button type="submit" class="btn btn-success">Register me</button>
 
