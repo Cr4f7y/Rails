@@ -1,0 +1,23 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="container">
+      <div id="chat-text" >
+        <%- @messages.each do |message| %>
+            <div class="panel panel-default">
+              <div class="panel-heading"><%= message.author %></div>
+              <div class="panel-body"><%= message.body %></div>
+            </div>
+        <%- end %>
+      </div>
+      <form id="input-form" class="form-inline">
+        <div class="form-group">
+
+        </div>
+        <div class="col-md-8 form-group">
+          <input id="input-body" type="text" class="form-control" placeholder="Enter chat text here!" autofocus />
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+
+      </form>
+
+    </div>
+</div>
