@@ -2,7 +2,7 @@
     <div class="container">
       <div id="chat-text" >
         <%- @messages.each do |message| %>
-            <div class="panel panel-default">
+            <div id="message" class="panel panel-primary">
               <div class="panel-heading"><%= message.author %></div>
               <div class="panel-body"><%= message.body %></div>
             </div>

@@ -11,14 +11,15 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div id="navbar" class="navbar-collapse collapse">
-      <a class="navbar-brand" href="/">Chat v 1.2</a>
-      <a class="navbar-brand" href="/chat">Home</a>
+      <a class="navbar-brand" href="/">Home</a>
+      <a class="navbar-brand" href="/chat">Chat</a>
 
-          <form method="post" action="reset">
+          <form method="get" action="/reset">
             <button type="submit" class="btn btn-success btn-lg pull-right">Logout</button>
           </form>
-          <a class="navbar-brand pull-right"> Signed in as <%=session[:clientName]%></a>
-
+      <div class="navbar-brand pull-right">
+       <span>Signed in as <span id="cl_name"><%=session[:clientName]%></span></span>
+      </div>
     </div><!--/.navbar-collapse -->
   </div>
 </nav>

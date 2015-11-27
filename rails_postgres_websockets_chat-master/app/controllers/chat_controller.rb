@@ -4,7 +4,7 @@ class ChatController < ApplicationController
       redirect_to :controller => 'auth', :action => 'index'
     end
 
-    @messages = Message.first(5)
+    @messages = Message.first(5).reverse
     @name = session[:clientName]
   end
 

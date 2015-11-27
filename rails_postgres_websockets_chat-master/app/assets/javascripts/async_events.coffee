@@ -10,7 +10,7 @@ generateInterval = (attempts) ->
 
 ws = null
 createWebsocket = ->
-  scheme = "ws://" # TODO: make "wss://" in production
+  scheme = "wss://" # TODO: make "wss://" in production
   uri = scheme + window.document.location.host + '/'
   ws = new WebSocket(uri)
 
@@ -19,8 +19,8 @@ createWebsocket = ->
 
   ws.onmessage = (message) ->
     data = JSON.parse(message.data)
-    $('#chat-text').prepend '<div class=\'panel panel-primary\' ><div class=\'panel-heading\'>' + data.author + '</div><div class=\'panel-body\'>' + data.body + '</div></div>'
-
+    $('#chat-text').append '<div class=\'panel panel-primary\' id=\'message\'><div class=\'panel-heading\'>' + data.author + '</div><div class=\'panel-body\'>' + data.body + '</div><div class=\'panel-body\'>' + '</div></div>'
+    $('#message').first().remove()
   ws.onclose = ->
     setTimeout ->
       attempts++
@@ -34,10 +34,12 @@ $ ->
   $('#input-form').on 'submit', (event) ->
 
     event.preventDefault()
-    author = 0
+    author = document.getElementById('cl_name').innerHTML
     body = $('#input-body')[0].value
     ws.send JSON.stringify(
       author: author
-      body: body)
+      body: body
+      )
     $('#input-body')[0].value = ''
+
     return

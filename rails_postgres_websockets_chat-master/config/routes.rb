@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   root 'auth#index'
   get 'registration',to:'auth#registration'
-  post 'registration/handler_registration' => 'auth#registrationHandler'
+  post '/registrationHandler' => 'auth#registrationHandler'
   post 'log_in' => 'auth#log_inHandler'
   get 'chat' => 'chat#index'
-  post '/reset' => 'chat#reset'
+  get '/reset' => 'chat#reset'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -19,7 +19,7 @@
           <!-- Begin # DIV Form -->
           <div id="div-forms">
             <!-- Begin # Login Form -->
-            <form id="login-form" action="http://127.0.0.1:3000/log_in" method="post" data-toggle="validator">
+            <form id="login-form" action="/log_in" method="post" data-toggle="validator">
               <div class="modal-body">
                 <div id="div-login-msg">
                   <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -43,15 +43,15 @@
             <!-- End # Login Form -->
 
           <!-- Begin | Register Form -->
-            <form id="register-form" style="display:none;" action="registrationHandler" method="post" data-toggle="validator">
+            <form id="register-form" style="display:none;" action="/registrationHandler" method="post" >
               <div class="modal-body">
                 <div id="div-register-msg">
                   <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
                   <span id="text-register-msg">Register an account.</span>
                 </div>
-                <input id="name" class="form-control" type="text" placeholder="Username" required>
-                <input id="email" class="form-control" type="text" placeholder="E-Mail" required>
-                <input id="passwd" class="form-control" type="password" placeholder="Password" required>
+                <input name="name" class="form-control" type="text" placeholder="Username" required>
+                <input name="email" class="form-control" type="text" placeholder="E-Mail" required>
+                <input name="passwd" class="form-control" type="password" placeholder="Password" required>
               </div>
               <div class="modal-footer">
                 <div>

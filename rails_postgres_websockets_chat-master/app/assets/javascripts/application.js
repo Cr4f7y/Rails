@@ -31,29 +31,9 @@ $(function() {
     var $formRegister = $('#register-form');
     var $divForms = $('#div-forms');
     var $modalAnimateTime = 300;
-    var $msgAnimateTime = 150;
-
-    $("form").submit(function () {
-        switch(this.id) {
-            case "login-form":
-                var $lg_username=$('#login_username').val();
-                var $lg_password=$('#login_password').val();
-                if ($lg_username == "ERROR") {
-                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
-                } else {
-                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
-                }
-                return false;
-                break;
-
-            default:
-                return false;
-        }
-        return false;
-    });
 
     $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
-    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
+    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin) });
 
 
     function modalAnimate ($oldForm, $newForm) {
@@ -64,12 +44,6 @@ $(function() {
             $divForms.animate({height: $newH}, $modalAnimateTime, function(){
                 $newForm.fadeToggle($modalAnimateTime);
             });
-        });
-    }
-
-    function msgFade ($msgId, $msgText) {
-        $msgId.fadeOut($msgAnimateTime, function() {
-            $(this).text($msgText).fadeIn($msgAnimateTime);
         });
     }
 
