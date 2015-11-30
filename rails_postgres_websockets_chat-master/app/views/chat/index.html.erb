@@ -2,12 +2,40 @@
     <div class="container">
       <div id="chat-text" >
         <%- @messages.each do |message| %>
-            <div id="message" class="panel panel-primary">
-              <div class="panel-heading"><%= message.author %></div>
-              <div class="panel-body"><%= message.body %></div>
+            <div class="col-lg-8" id="message_li">
+              <div class="panel-body">
+                <ul class="chat">
+                  <li class="left clearfix">
+                            <span class="chat-img pull-left">
+                                <img src="http://placehold.it/50/55C1E7/fff&text=<%=message.author[0]%>" alt="User Avatar" class="img-circle" />
+                            </span>
+                    <div class="chat-body clearfix">
+                      <div class="header">
+                        <strong class="primary-font"><%= message.author %></strong><br>
+                        <small class="text-muted">
+                          <span class="glyphicon glyphicon-time"></span>
+                          <%=message.created_at%>
+                        </small>
+                      </div>
+                      <p>
+                        <%= message.body %>
+                      </p>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
             </div>
+
         <%- end %>
       </div>
+    </div>
+
+
+
+
+
+
       <form id="input-form" class="form-inline">
         <div class="form-group">
 
@@ -20,4 +48,3 @@
       </form>
 
     </div>
-</div>

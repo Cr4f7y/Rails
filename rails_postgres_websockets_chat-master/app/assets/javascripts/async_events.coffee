@@ -10,7 +10,7 @@ generateInterval = (attempts) ->
 
 ws = null
 createWebsocket = ->
-  scheme = "wss://" # TODO: make "wss://" in production
+  scheme = "ws://" # TODO: make "wss://" in production
   uri = scheme + window.document.location.host + '/'
   ws = new WebSocket(uri)
 
@@ -19,8 +19,29 @@ createWebsocket = ->
 
   ws.onmessage = (message) ->
     data = JSON.parse(message.data)
-    $('#chat-text').append '<div class=\'panel panel-primary\' id=\'message\'><div class=\'panel-heading\'>' + data.author + '</div><div class=\'panel-body\'>' + data.body + '</div><div class=\'panel-body\'>' + '</div></div>'
-    $('#message').first().remove()
+    $('#chat-text').append '<div class="col-lg-8" id="message_li">
+              <div class="panel-body">
+                <ul class="chat">
+                  <li class="left clearfix">
+                            <span class="chat-img pull-left">
+                                <img src="http://placehold.it/50/55C1E7/fff&text='+data.author[0]+'" alt="User Avatar" class="img-circle" />
+                            </span>
+                    <div class="chat-body clearfix">
+                      <div class="header">
+                        <strong class="primary-font">'+ data.author + '</strong><br>
+                        <small class="text-muted">
+                          <span class="glyphicon glyphicon-time">' + data.created_at + '</span>
+                        </small>
+                      </div>
+                      <p>' + data.body +
+                      '</p>
+                      </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>'
+    $('#message_li').last().remove()
   ws.onclose = ->
     setTimeout ->
       attempts++
@@ -36,9 +57,11 @@ $ ->
     event.preventDefault()
     author = document.getElementById('cl_name').innerHTML
     body = $('#input-body')[0].value
+    created_at = new Date();
     ws.send JSON.stringify(
       author: author
       body: body
+      created_at: created_at
       )
     $('#input-body')[0].value = ''
 
