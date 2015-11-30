@@ -1,4 +1,6 @@
 @import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 .prettyline {
   height: 5px;
   border-top: 0;
@@ -57,8 +59,18 @@
   margin-right: 5px;
 }
 
+ul.list-unstyled{
+  font-size: 12px !important;
+}
 
-
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 
 

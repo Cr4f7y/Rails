@@ -12,4 +12,8 @@ class ChatController < ApplicationController
     reset_session
     redirect_to :controller => 'auth', :action => 'index'
   end
+
+  def test
+
+  end
 end
