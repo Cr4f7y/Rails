@@ -6,7 +6,7 @@ gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the webserver
-
+gem 'bcrypt'
 gem 'rack-timeout'
 
 # Use SCSS for stylesheets

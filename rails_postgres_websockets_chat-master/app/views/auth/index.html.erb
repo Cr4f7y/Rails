@@ -5,20 +5,20 @@
     <h1>Welcome to Chat v 1.5!</h1>
     <p>Hi, this is my first Rails chat app using Postgres + Faye websockets. Check it out here <a href="https://github.com/Cr4f7y/Rails/tree/master/rails_postgres_websockets_chat-master">GitHub</a></p>
     <!-- Button trigger modal -->
-
         <!-- BEGIN # MODAL LOGIN -->
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header" align="center">
-            <img class="img-circle" id="img_logo" src="http://files.gamebanana.com/img/ico/sprays/_366-.png">
+            <img class="img-circle" id="img_logo" src="https://www.itracks.com/wp-content/themes/Avada/images/header-nav/chat.png">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
             </button>
           </div>
           <!-- Begin # DIV Form -->
           <div id="div-forms">
             <!-- Begin # Login Form -->
+
             <form id="login-form" action="/log_in" method="post" data-toggle="validator">
               <div class="modal-body">
                 <div id="div-login-msg">
@@ -35,6 +35,7 @@
                 <div>
                   <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
                 </div>
+
                 <div>
 
                   <center>
@@ -42,8 +43,8 @@
                   </center>
                 </div>
               </div>
-
-                     </form>
+              <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+            </form>
             <!-- End # Login Form -->
 
           <!-- Begin | Register Form -->
@@ -61,7 +62,7 @@
                   <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                  <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" data-error="At least 6 characters" required>
+                  <input name="passwd" type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" data-error="At least 6 characters" required>
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
@@ -75,6 +76,7 @@
                   </center>
                 </div>
               </div>
+              <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
             </form>
             <!-- End | Register Form -->
 

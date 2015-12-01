@@ -25,7 +25,7 @@
  #
  ##################################################################### */
 
-$(function() {
+$(function() {  //Function for modal animation and change between Login/Registration
 
     var $formLogin = $('#login-form');
     var $formRegister = $('#register-form');
@@ -47,4 +47,9 @@ $(function() {
         });
     }
 
+
 });
+
+setTimeout(function() {             //JS to fade away the flash notice,
+    $('#flash-notice').fadeOut();
+   }, 5000 );

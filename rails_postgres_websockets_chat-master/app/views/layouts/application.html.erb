@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ConsensusWall</title>
+  <title>CR4F7Y's Chat</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   <%= csrf_meta_tags %>
 </head>
 
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
+
+  <% flash.each do |key, value| %>
+      <div id="flash-notice" class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+
     <div class="container">
-    <div id="navbar" class="navbar-collapse collapse">
+     <div id="navbar" class="navbar-collapse collapse">
       <a class="navbar-brand" href="/">Home</a>
 
       <button type="submit" class="btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#login-modal">Sign in</button>

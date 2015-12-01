@@ -10,7 +10,7 @@ generateInterval = (attempts) ->
 
 ws = null
 createWebsocket = ->
-  scheme = "wss://" # TODO: make "wss://" in production
+  scheme = "ws://" # TODO: make "wss://" in production
   uri = scheme + window.document.location.host + '/'
   ws = new WebSocket(uri)
 
