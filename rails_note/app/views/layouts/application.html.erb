@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CR4F7Y's Note</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="/assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+  <% flash.each do |key, value| %>
+      <div id="flash-notice" class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+
+    <div class="container">
+     <div id="navbar" class="navbar-collapse collapse">
+
+      <button type="submit" class="btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#login-modal">Sign in</button>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+<%= yield %>
+
+</body>
+</html>

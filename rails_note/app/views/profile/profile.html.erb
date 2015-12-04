@@ -1,0 +1,47 @@
+<div class="container myClass">
+  <div class="panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Profile</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class=" col-md-9">
+            <form method="post" action="/edit">
+                  <table class="table table-user-information">
+                    <tbody>
+                    <tr>
+                      <td>Name:</td>
+                      <td><a name='name' href="#" id="username"><%=@client.name%></a></td>
+                      <td><input id="hiddenName" name="name" placeholder="New Name"></td>
+                      </tr>
+                    <tr>
+                      <td>Last Name:</td>
+                      <td><a href="#" id="username"><%=@client.lastname%></a></td>
+                      <td><input id="hiddenName" name="lastname" placeholder="New Last Name"></td>
+                    </tr>
+                    <tr>
+                      <td>Date of Birth:</td>
+                      <td><a href="#" id="username"><%=@client.birthdate%></a></td>
+                      <td><input id="hiddenName" name="birthdate" placeholder="New Birth Date"></td>
+                    </tr>
+                    <tr>
+                    <td>Phone Number:</td>
+                      <td><a href="#" id="username"><%=@client.phone%></a></td>
+                      <td><input id="hiddenName" name="phone" placeholder="New Phone"></td>
+                    </tr>
+                    <tr>
+                      <td>Email:</td>
+                      <td><%=@client.email%></td>
+                      <td></td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+              <button type="submit" class="btn-success pull-right ">Save</button>
+              <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+            </form>
+        </div>
+      </div>
+    </div>
+
+  </div>

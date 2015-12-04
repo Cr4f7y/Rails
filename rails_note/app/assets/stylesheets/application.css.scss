@@ -1,0 +1,171 @@
+@import 'bootstrap';
+@import 'bootstrap-sprockets';
+@import 'bootstrap-datetimepicker';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "editable/bootstrap2-editable";
+
+.prettyline {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+.btn{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.p_form{
+  font-size: 11pt;
+}
+
+#chat-text {
+  margin-top: 80px;
+}
+.chat
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chat li
+{
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+  margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+  margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+  margin: 0;
+  color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+  margin-right: 5px;
+}
+
+ul.list-unstyled{
+  font-size: 12px !important;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.alert {
+  height: 50px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+#input-form{
+  margin-top: 100px !important;
+}
+
+div#229{
+  margin-top: 200px !important;
+}
+#input-body{
+  height: 400px;
+}
+
+
+.notes_div{
+
+  position: absolute;
+  bottom: -248px;
+  overflow: hidden;
+  height: 70px;
+  border-radius: 2px;
+  color: #7F7F7F;
+  background: white;
+  width: 98%;
+}
+.notes_div:hover{
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+  height: 250px;
+}
+.notes_div i{
+  font-size: 1em;
+}
+.notes_head{
+}
+.notes_header{
+  background: whitesmoke;
+  border-bottom: 1px solid lightgray;
+  padding:5px;
+  text-align: right;
+}
+.notes_content{
+  font-size: 0.8em;
+}
+.notes_short{
+  padding:5px 10px;
+}
+.notes_person{
+}
+.notes_title{
+  font-size: 1.2em;
+}
+.notes_detail{
+  padding: 10px;
+}
+.notes_partition{
+  border-bottom: 1px solid #ccc;
+  padding:5px 10px;
+}
+.notes_action{
+  text-align: center;
+  padding: 10px;
+
+
+}
+#genSkypeCall p{
+  text-align: center;
+}
+
+.myClass{
+  margin-top: 100px;
+}
+
+.input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
+  height: 49px;
+}
+td {
+  word-break:break-all;
+}
+
+
+
+
+
+
