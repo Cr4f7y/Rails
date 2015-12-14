@@ -1,3 +1,19 @@
+<% if signed_in? %>
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-xs-6">
+          <%= render 'shared/user_info' %>
+        </div>
+
+        <div class="col-xs-6">
+
+          <%= render 'shared/micropost_form' %>
+
+        </div>
+      </div>
+    </div>
+<% else %>
 <div class="center hero-unit">
   <h1>Welcome to the Note App</h1>
 
@@ -9,5 +25,4 @@
 
   <%= link_to "Sign up now!", 'signup', class: "btn btn-large btn-primary" %>
 </div>
-
-<br>
+<% end %>
