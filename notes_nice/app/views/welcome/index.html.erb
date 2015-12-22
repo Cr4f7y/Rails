@@ -1,0 +1,23 @@
+<h1>Welcome#index</h1>
+<%= link_to image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_large_noborder.png"), '/auth/steam' %>
+
+<% if session.key? :uid %>
+    <h3>Signed in as:</h3>
+    <%= image_tag (@user.image_url) %>
+    <p><%= @user.nickname %></p>
+    <a href="http://steamcommunity.com/profiles/<%=@user.uid%>">Go to your steam profile</a>
+ <% end %>
+
+
+
+<ul>
+  <% @matchlist.each do |match| %>
+      <li><%= Date.strptime(match['start_time'].to_s, '%s').to_formatted_s(:rfc822) %> - <%= match['match_id'] %></li>
+  <% end %>
+</ul>
+
+<ul>
+    <%=@hello%>
+</ul>
+
+<div class="r-row" data-link-to="http://www.dotabuff.com/matches/2020843614"><p>12345</p></div>

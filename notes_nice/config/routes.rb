@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
 
   root  'static_pages#home'
+
+
+  match '/index', to: 'welcome#index', via: 'get'
+  post 'auth/steam/callback' => 'welcome#auth_callback'
+
+  match '/reset',  to: 'welcome#reset',            via: 'delete'
 
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'

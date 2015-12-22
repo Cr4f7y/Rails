@@ -12,6 +12,12 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
+    @micropost = current_user.microposts.destroy(micropost_params)
+    if @micropost.destroy
+      flash[:danger] = "Micropost destroyed!"
+    else
+      render 'static_pages/home'
+    end
   end
 
 
